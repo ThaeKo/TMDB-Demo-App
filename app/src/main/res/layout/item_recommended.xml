@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/size_100"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="@dimen/margin_1x"
+    android:layout_marginEnd="@dimen/margin_2x">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_image"
+        android:layout_width="@dimen/size_100"
+        android:layout_height="@dimen/size_120"
+        app:cardCornerRadius="@dimen/margin_1x_plus2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/guitar"
+            android:scaleType="fitXY"
+            />
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_movie_name"
+        android:layout_width="@dimen/margin_0"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_small"
+        android:textColor="@color/black"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_marginStart="@dimen/margin_2"
+        android:layout_marginEnd="@dimen/margin_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cv_image"
+        android:layout_marginTop="@dimen/margin_2x"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_fav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_2x"
+        android:src="@drawable/ic_baseline_favorite_border_24"
+        app:layout_constraintTop_toBottomOf="@id/tv_movie_name"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/margin_1x"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_fav_count"
+        android:layout_width="@dimen/margin_0"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_small"
+        android:textColor="@color/black"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_marginEnd="@dimen/margin_2"
+        android:layout_marginStart="@dimen/margin_2x"
+        app:layout_constraintStart_toEndOf="@id/iv_fav"
+        app:layout_constraintTop_toTopOf="@id/iv_fav"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/iv_fav"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

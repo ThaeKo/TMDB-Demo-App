@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_what_are_you_looking_for"
+        android:layout_marginStart="@dimen/margin_4x"
+        android:layout_marginTop="@dimen/margin_4x"
+        android:textSize="@dimen/text_title"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:layout_width="@dimen/margin_0"
+        android:layout_height="@dimen/size_30"
+        android:gravity="center_vertical"
+        android:background="@drawable/bg_search"
+        android:inputType="text"
+        android:textSize="@dimen/text_normal"
+        android:layout_marginStart="@dimen/margin_4x"
+        android:layout_marginEnd="@dimen/margin_1x"
+        android:drawableStart="@drawable/ic_baseline_search_24"
+        android:drawablePadding="@dimen/margin_1x"
+        android:paddingStart="@dimen/margin_1x"
+        android:hint="Search movie name"
+        app:layout_constraintTop_toTopOf="@id/btn_search"
+        app:layout_constraintBottom_toBottomOf="@id/btn_search"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_search"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_search"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/size_30"
+        android:layout_marginEnd="@dimen/margin_4x"
+        android:layout_marginTop="@dimen/margin_3x"
+        android:insetTop="@dimen/margin_0"
+        android:insetBottom="@dimen/margin_0"
+        android:minHeight="@dimen/margin_0"
+        android:text="@string/str_search"
+        android:textAllCaps="false"
+        android:textSize="@dimen/text_normal"
+        app:backgroundTint="@color/teal_700"
+        app:cornerRadius="@dimen/margin_1x"
+        app:layout_constraintTop_toBottomOf="@id/lable"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_movie"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:visibility="visible"
+        android:layout_marginTop="@dimen/margin_2x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_search"
+        app:tabIndicator="@color/teal_700"
+        app:tabIndicatorColor="@color/teal_700"
+        app:tabIndicatorFullWidth="true"
+        app:tabIndicatorHeight="@dimen/margin_2"
+        app:tabMode="scrollable"
+        app:tabGravity="fill"
+        app:tabSelectedTextColor="@color/black"
+        app:tabTextColor="@android:color/darker_gray" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vp_movie"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tab_movie"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

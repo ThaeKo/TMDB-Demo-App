@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/welcome"
+    tools:context=".activities.MainActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_3x"
+        android:src="@drawable/ic_baseline_close_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/appCompatImageView"
+        android:layout_width="@dimen/margin_0"
+        android:layout_height="@dimen/margin_0"
+        android:src="@drawable/clouds"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline2" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lbl_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_4x"
+        android:text="@string/lbl_welcome"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_24"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/margin_6x"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_close" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lbl_welcome_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_4x"
+        android:layout_marginTop="@dimen/margin_4x"
+        android:text="@string/lbl_welcome_desc"
+        android:textSize="@dimen/text_normal"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lbl_welcome" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.50" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_facebook"
+        android:layout_width="@dimen/margin_0"
+        android:layout_height="@dimen/size_40"
+        android:layout_marginStart="@dimen/margin_4x"
+        android:layout_marginEnd="@dimen/margin_4x"
+        android:insetTop="@dimen/margin_0"
+        android:insetBottom="@dimen/margin_0"
+        android:minHeight="@dimen/margin_0"
+        android:text="@string/str_facebook"
+        android:textAllCaps="false"
+        app:backgroundTint="@color/blue"
+        app:cornerRadius="@dimen/margin_1x_plus2"
+        app:layout_constraintBottom_toTopOf="@+id/btn_email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_welcome_desc"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_email"
+        android:layout_width="@dimen/margin_0"
+        android:layout_height="@dimen/size_40"
+        android:layout_marginStart="@dimen/margin_4x"
+        android:layout_marginTop="@dimen/margin_2x"
+        android:layout_marginEnd="@dimen/margin_4x"
+        android:insetTop="@dimen/margin_0"
+        android:insetBottom="@dimen/margin_0"
+        android:minHeight="@dimen/margin_0"
+        android:text="@string/str_gmail"
+        android:textAllCaps="false"
+        app:backgroundTint="@color/blue"
+        app:cornerRadius="@dimen/margin_1x_plus2"
+        app:layout_constraintBottom_toTopOf="@+id/btn_create_account"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_facebook" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_create_account"
+        android:layout_width="@dimen/margin_0"
+        android:layout_height="@dimen/size_40"
+        android:layout_marginStart="@dimen/margin_4x"
+        android:layout_marginTop="@dimen/margin_2x"
+        android:layout_marginEnd="@dimen/margin_4x"
+        android:insetTop="@dimen/margin_0"
+        android:insetBottom="@dimen/margin_0"
+        android:minHeight="@dimen/margin_0"
+        android:text="@string/str_create_account"
+        android:textAllCaps="false"
+        app:backgroundTint="@color/teal_700"
+        app:cornerRadius="@dimen/margin_1x_plus2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_email" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fillViewport="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBackground"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_3x"
+            android:layout_marginTop="@dimen/margin_3x"
+            android:src="@drawable/ic_baseline_chevron_left_24"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_almost_there"
+            android:layout_marginStart="@dimen/margin_4x"
+            android:layout_marginTop="@dimen/margin_4x"
+            android:textSize="@dimen/text_title"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_almost_there_desc"
+            android:layout_marginStart="@dimen/margin_4x"
+            android:layout_marginTop="@dimen/margin_3x"
+            android:textSize="@dimen/text_normal"
+            android:textColor="@color/black"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_mandatory"
+            android:layout_marginStart="@dimen/margin_4x"
+            android:layout_marginTop="@dimen/margin_3x"
+            android:layout_marginBottom="@dimen/margin_3x"
+            android:textSize="@dimen/text_small"
+            />
+
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:src="@drawable/guitar"
+        android:paddingBottom="@dimen/margin_7x"
+        android:layout_marginEnd="@dimen/margin_1x"
+        app:layout_constraintTop_toBottomOf="@id/layout_header"
+        app:layout_constraintBottom_toBottomOf="@id/layout_header"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lbl_first_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_first_name"
+        android:layout_marginStart="@dimen/margin_4x"
+        android:layout_marginTop="@dimen/margin_4x"
+        android:textSize="@dimen/text_small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_header"
+        />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_first_name"
+        android:layout_width="@dimen/margin_0"
+        android:layout_height="@dimen/size_40"
+        android:layout_marginStart="@dimen/margin_4x"
+        android:layout_marginEnd="@dimen/margin_4x"
+        android:layout_marginTop="@dimen/margin_2x"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:gravity="center_vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lbl_first_name"
+        />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lbl_last_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_last_name"
+            android:layout_marginStart="@dimen/margin_4x"
+            android:layout_marginTop="@dimen/margin_2x"
+            android:textSize="@dimen/text_small"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_first_name"
+            />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_last_name"
+            android:layout_width="@dimen/margin_0"
+            android:layout_height="@dimen/size_40"
+            android:layout_marginStart="@dimen/margin_4x"
+            android:layout_marginEnd="@dimen/margin_4x"
+            android:layout_marginTop="@dimen/margin_2x"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:gravity="center_vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lbl_last_name"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lbl_email_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_email_address"
+            android:layout_marginStart="@dimen/margin_4x"
+            android:layout_marginTop="@dimen/margin_2x"
+            android:textSize="@dimen/text_small"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_last_name"
+            />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_email_address"
+            android:layout_width="@dimen/margin_0"
+            android:layout_height="@dimen/size_40"
+            android:layout_marginStart="@dimen/margin_4x"
+            android:layout_marginEnd="@dimen/margin_4x"
+            android:layout_marginTop="@dimen/margin_2x"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/black"
+            android:gravity="center_vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lbl_email_address"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lbl_dob"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_dob"
+            android:layout_marginStart="@dimen/margin_4x"
+            android:layout_marginTop="@dimen/margin_2x"
+            android:textSize="@dimen/text_small"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_email_address"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/et_date_of_birth"
+            android:layout_width="@dimen/margin_0"
+            android:layout_height="@dimen/size_40"
+            android:layout_marginStart="@dimen/margin_4x"
+            android:layout_marginEnd="@dimen/margin_4x"
+            android:layout_marginTop="@dimen/margin_2x"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:hint="@string/hint_date_format"
+            android:gravity="center_vertical"
+            android:drawableEnd="@drawable/dob"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lbl_dob"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lbl_nationality"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_nationality"
+            android:layout_marginStart="@dimen/margin_4x"
+            android:layout_marginTop="@dimen/margin_2x"
+            android:textSize="@dimen/text_small"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_date_of_birth"
+            />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_nationality"
+            android:layout_width="@dimen/margin_0"
+            android:layout_height="@dimen/size_40"
+            android:layout_marginStart="@dimen/margin_4x"
+            android:layout_marginEnd="@dimen/margin_4x"
+            android:layout_marginTop="@dimen/margin_2x"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:gravity="center_vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lbl_nationality"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lbl_country"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_country"
+            android:layout_marginStart="@dimen/margin_4x"
+            android:layout_marginTop="@dimen/margin_2x"
+            android:textSize="@dimen/text_small"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_nationality"
+            />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_country"
+            android:layout_width="@dimen/margin_0"
+            android:layout_height="@dimen/size_40"
+            android:layout_marginStart="@dimen/margin_4x"
+            android:layout_marginEnd="@dimen/margin_4x"
+            android:layout_marginTop="@dimen/margin_2x"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:gravity="center_vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lbl_country"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lbl_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_country"
+            android:layout_marginStart="@dimen/margin_4x"
+            android:layout_marginTop="@dimen/margin_2x"
+            android:textSize="@dimen/text_small"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_country"
+            />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_phone"
+            android:layout_width="@dimen/margin_0"
+            android:layout_height="@dimen/size_40"
+            android:layout_marginStart="@dimen/margin_4x"
+            android:layout_marginEnd="@dimen/margin_4x"
+            android:layout_marginTop="@dimen/margin_2x"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:gravity="center_vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lbl_phone"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_create_my_account"
+            android:layout_width="@dimen/margin_0"
+            android:layout_height="@dimen/size_40"
+            android:layout_margin="@dimen/margin_4x"
+            android:insetTop="@dimen/margin_0"
+            android:insetBottom="@dimen/margin_0"
+            android:minHeight="@dimen/margin_0"
+            android:text="@string/str_create_my_account_now"
+            android:textAllCaps="false"
+            app:backgroundTint="@color/teal_700"
+            app:cornerRadius="@dimen/margin_1x_plus2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_phone" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
